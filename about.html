@@ -8,19 +8,76 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+
+    
+    
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery-main {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .gallery-main .title-caption {
+            margin-bottom: 40px;
+        }
+        .gal-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gal-item {
+            position: relative;
+            width: 30%;
+            margin-bottom: 10px;
+        }
+        .gal-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gal-item .description {
+            display: none;
+        }
+        .gal-item:hover .description {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .gal-item {
+                width: 45%;
+            }
+        }
+        @media (max-width: 576px) {
+            .gal-item {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+
+
+
+
     
     <link href="img/favicon.ico" rel="icon">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Site CSS -->
-<link rel="stylesheet" href="css/style.css">
-<!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
-<!-- color -->
-<link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
 
-<!-- Modernizer -->
-<script src="js/modernizer.js"></script>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,214 +206,85 @@
             </div>
         </div>
         <!-- About End -->
+        
         <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                             <h2 class="block-title text-center">
-                            Our Gallery	
-                        </h2>
-                            <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available </p>
+                                Our Gallery
+                            </h2>
+                            <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available</p>
                         </div>
                         <div class="gal-container clearfix">
-                            <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
                                     <a href="#" data-toggle="modal" data-target="#1">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 1" />
                                     </a>
-                                    <div class="modal fade" id="1" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 1 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 1 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
                                     <a href="#" data-toggle="modal" data-target="#2">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 2" />
                                     </a>
-                                    <div class="modal fade" id="2" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 2 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 2 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
                                     <a href="#" data-toggle="modal" data-target="#3">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 3" />
                                     </a>
-                                    <div class="modal fade" id="3" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 3 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 3 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
                                     <a href="#" data-toggle="modal" data-target="#4">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 4" />
                                     </a>
-                                    <div class="modal fade" id="4" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 4 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 4 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
                                     <a href="#" data-toggle="modal" data-target="#5">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 5" />
                                     </a>
-                                    <div class="modal fade" id="5" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 5 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 5 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#9">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                    <a href="#" data-toggle="modal" data-target="#6">
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 6" />
                                     </a>
-                                    <div class="modal fade" id="9" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 6 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 6 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+                            <div class="gal-item">
                                 <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#10">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
+                                    <a href="#" data-toggle="modal" data-target="#7">
+                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 7" />
                                     </a>
-                                    <div class="modal fade" id="10" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 7 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#11">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                    </a>
-                                    <div class="modal fade" id="11" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 8 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#12">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                    </a>
-                                    <div class="modal fade" id="12" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 9 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#13">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                    </a>
-                                    <div class="modal fade" id="13" tabindex="-1" role="dialog">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                <div class="modal-body">
-                                                    <img src="img/Carbonara-Pizza.jpg" alt="" />
-                                                </div>
-                                                <div class="col-md-12 description">
-                                                    <h4>This is the 10 one on my Gallery</h4>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="description">
+                                        <h4>This is the 7 one on my Gallery</h4>
                                     </div>
                                 </div>
                             </div>
@@ -370,6 +298,19 @@
             <!-- end container -->
         </div>
         <!-- end gallery-main -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+
+
+
+
+
+
+
+
+
 
         <!-- Team Start -->
         <div class="container-xxl pt-5 pb-3">

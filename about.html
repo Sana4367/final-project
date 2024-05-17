@@ -16,16 +16,20 @@
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 10px;
-            max-width: 1000px;
             width: 100%;
+            max-width: 1200px; /* Maximum width for large screens */
+            padding: 10px; /* Padding around the gallery */
+            box-sizing: border-box;
         }
         .gallery-item {
             position: relative;
@@ -204,7 +208,6 @@
         </div>
         <!-- About End -->
 
-
         <div class="gallery">
             <div class="gallery-item large">
                 <img src="https://picsum.photos/600/300?random=1" alt="Image 1">
@@ -230,9 +233,16 @@
                 <img src="https://picsum.photos/600/300?random=6" alt="Image 6">
                 <p>Description for Image 6</p>
             </div>
-            
+            <div class="gallery-item">
+                <img src="https://picsum.photos/400/300?random=7" alt="Image 7">
+                <p>Description for Image 7</p>
+            </div>
+    <div class="gallery-item">
+                <img src="https://picsum.photos/400/300?random=7" alt="Image 7">
+                <p>Description for Image 7</p>
+            </div>
         </div>
-
+        
         <!-- Team Start -->
         <div class="container-xxl pt-5 pb-3">
             <div class="container">

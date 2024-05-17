@@ -9,45 +9,43 @@
     <meta content="" name="description">
 
 
-    
-    
-    <title>Responsive Image Gallery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Beautiful Responsive Image Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .gallery-main {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-        .gallery-main .title-caption {
-            margin-bottom: 40px;
-        }
-        .gal-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
             justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
         }
-        .gal-item {
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            gap: 10px;
+            margin: 20px;
+        }
+        .gallery-item {
             position: relative;
-            width: 30%;
-            margin-bottom: 10px;
+            width: calc(50% - 10px); /* Adjusted width for two items per row */
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 250px; /* Adjust the height as needed */
         }
-        .gal-item img {
+        .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease-in-out;
         }
-        .gal-item .description {
-            display: none;
+        .gallery-item:hover img {
+            transform: scale(1.1);
         }
-        .gal-item:hover .description {
-            display: block;
+        .gallery-item p {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -57,15 +55,22 @@
             margin: 0;
             padding: 10px;
             text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .gallery-item:hover p {
+            opacity: 1;
         }
         @media (max-width: 768px) {
-            .gal-item {
-                width: 45%;
+            .gallery-item {
+                width: calc(50% - 10px);
+                height: 200px; /* Adjust the height for smaller screens */
             }
         }
         @media (max-width: 576px) {
-            .gal-item {
-                width: 100%;
+            .gallery-item {
+                width: calc(100% - 10px);
+                height: 150px; /* Adjust the height for smaller screens */
             }
         }
     </style>
@@ -74,7 +79,7 @@
 
 
 
-
+    
     
     <link href="img/favicon.ico" rel="icon">
 
@@ -207,101 +212,36 @@
         </div>
         <!-- About End -->
         
-        <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <h2 class="block-title text-center">
-                                Our Gallery
-                            </h2>
-                            <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available</p>
-                        </div>
-                        <div class="gal-container clearfix">
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#1">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 1" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 1 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#2">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 2" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 2 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#3">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 3" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 3 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#4">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 4" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 4 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#5">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 5" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 5 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#6">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 6" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 6 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gal-item">
-                                <div class="box">
-                                    <a href="#" data-toggle="modal" data-target="#7">
-                                        <img src="img/Carbonara-Pizza.jpg" alt="Image 7" />
-                                    </a>
-                                    <div class="description">
-                                        <h4>This is the 7 one on my Gallery</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end gal-container -->
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 1">
+                <p>Description for Image 1</p>
             </div>
-            <!-- end container -->
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 2">
+                <p>Description for Image 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 3">
+                <p>Description for Image 3</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 4">
+                <p>Description for Image 4</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 5">
+                <p>Description for Image 5</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 6">
+                <p>Description for Image 6</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400" alt="Image 7">
+                <p>Description for Image 7</p>
+            </div>
         </div>
-        <!-- end gallery-main -->
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
 
 
 

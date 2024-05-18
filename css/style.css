@@ -5,6 +5,10 @@
     --dark: #0F172B;
 }
 
+
+
+
+
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
@@ -152,7 +156,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
+    background: linear-gradient(rgba(15, 23, 43, 0.568), rgba(15, 23, 43, .568)), url(../img/bg-3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -388,6 +392,74 @@
 .testimonial-carousel .owl-item.center .testimonial-item * {
     color: var(--light) !important;
 }
+
+
+
+.containerat {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75vh;
+    background: linear-gradient(rgba(15, 23, 43, 0.425), rgba(15, 23, 43, 0.425)), url(../img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20%;
+    
+}
+
+.content {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 450px;
+    color: white;
+    padding: 5%;
+    padding-top: 8%;
+    text-align: right;
+}
+
+.content h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.button {
+    background-color: #ffad14;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    transition: background-color 0.3s ease;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adding gap between divs */
+  
+}
+.left, .right {
+    flex: 1;
+    margin: 80px; /* Adding margin outside the divs */
+}
+
+
+
+.button:hover {
+    background-color: #aaf1ade2;
+}
+ 
+
+
 
 .testimonial-carousel .owl-dots {
     margin-top: 24px;

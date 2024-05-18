@@ -117,3 +117,15 @@
     
 })(jQuery);
 
+document.getElementById('readmore').addEventListener('click', function() {
+    var moreContent = document.getElementById('moreContent');
+    if (moreContent.style.display === 'none') {
+        moreContent.style.display = 'block';
+        this.textContent = 'Read less...';
+    } else {
+        moreContent.style.display = 'block';
+        this.style.backgroundColor = 'transparent';
+        
+        this.textContent = "Alex Martinez's story is a perfect example of turning passion into success. His efforts in revamping the menu, enhancing the dining experience, and leveraging digital marketing transformed Bella's Bistro into a beloved local institution. With a keen eye for detail and a customer-first approach, Alex not only increased sales but also built a loyal customer base that continues to grow.";
+    }
+});

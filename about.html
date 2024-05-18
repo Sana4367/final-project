@@ -11,71 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Image Gallery</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            width: 100%;
-            max-width: 1200px; /* Maximum width for large screens */
-            padding: 10px; /* Padding around the gallery */
-            box-sizing: border-box;
-        }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            height: 0;
-            padding-bottom: 75%; /* 4:3 Aspect Ratio */
-        }
-        .gallery-item img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        .gallery-item p {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        .gallery-item:hover p {
-            opacity: 1;
-        }
-        .gallery-item.large {
-            grid-column: span 2;
-            padding-bottom: 37.5%; /* 8:3 Aspect Ratio */
-        }
-        @media (max-width: 600px) {
-            .gallery-item.large {
-                grid-column: span 1;
-                padding-bottom: 75%; /* 4:3 Aspect Ratio */
-            }
-        }
-    </style>
+
+    
     
     <link href="img/favicon.ico" rel="icon">
 
@@ -207,39 +144,42 @@
             </div>
         </div>
         <!-- About End -->
-
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5  class="section-title ff-secondary text-center text-primary fw-normal">Pizza Hut View</h5>
+            <h1 class="mb-5">Gallery</h1>
+        </div>
  <div class="gallery">
         <div class="gallery-item large">
-            <img src="https://picsum.photos/600/300?random=1" alt="Image 1">
-            <p>Description for Image 1</p>
+            <img src="img/view4.jpg" alt="Image 1">
+            <p>pizza view before serving</p>
         </div>
         <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=2" alt="Image 2">
-            <p>Description for Image 2</p>
+            <img src="img/about-2.jpg" alt="Image 2">
+            <p>Pizza Hut restoran view</p>
         </div>
         <div class="gallery-item">
-            <img src="https://picsum.photos/300/400?random=3" alt="Image 3">
-            <p>Description for Image 3</p>
+            <img src="img/about-3.jpg" alt="Image 3">
+            <p>customer's pic</p>
         </div>
         <div class="gallery-item">
-            <img src="https://picsum.photos/300/400?random=4" alt="Image 4">
-            <p>Description for Image 4</p>
+            <img src="img/about-4.jpg" alt="Image 4">
+            <p>Special order</p>
         </div>
         <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=5" alt="Image 5">
-            <p>Description for Image 5</p>
+            <img src="img/video.jpg" alt="Image 5">
+            <p>Customer while waiting for order</p>
         </div>
         <div class="gallery-item large">
-            <img src="https://picsum.photos/600/300?random=6" alt="Image 6">
-            <p>Description for Image 6</p>
+            <img src="img/view3.jpg" alt="Image 6">
+            <p>Pizza view after serving</p>
         </div>
         <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=7" alt="Image 7">
-            <p>Description for Image 7</p>
+            <img src="img/view2.jpg" alt="Image 7">
+            <p>Customer after receiving order</p>
         </div>
 <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=7" alt="Image 7">
-            <p>Description for Image 7</p>
+            <img src="img/view 1.jpg" alt="Image 7">
+            <p>Pizza view after serving</p>
         </div>
     </div>
         
@@ -363,10 +303,10 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="C:/Users/PMYLS/Desktop/clone/final-project/about.html">Home</a>
-                                <a href="C:/Users/PMYLS/Desktop/clone/final-project/contact.html">Contact us</a>
-                                <a href="C:/Users/PMYLS/Desktop/clone/final-project/service.html">Services</a>
-                                <a href="C:/Users/PMYLS/Desktop/clone/final-project/menu.html">Menu</a>
+                                <a href="about.html">Home</a>
+                                <a href="contact.html">Contact us</a>
+                                <a href="service.html">Services</a>
+                                <a href="menu.html">Menu</a>
                             </div>
                         </div>
                     </div>

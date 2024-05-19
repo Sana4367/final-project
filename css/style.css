@@ -568,6 +568,7 @@ body {
     max-width: 1200px; /* Maximum width for large screens */
     padding: 10px; /* Padding around the gallery */
     box-sizing: border-box; 
+    margin: 0 auto; /* Center the gallery */
 }
 .gallery-item {
     position: relative;

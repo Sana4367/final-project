@@ -4,12 +4,6 @@
     --light: #F1F8FF;
     --dark: #0F172B;
 }
-
-
-
-
-
-
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
@@ -567,7 +561,8 @@ body {
     width: 100%;
     max-width: 1200px; /* Maximum width for large screens */
     padding: 10px; /* Padding around the gallery */
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    margin: 0 auto; /* Center the gallery */
 }
 .gallery-item {
     position: relative;

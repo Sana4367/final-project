@@ -144,11 +144,15 @@
             </div>
         </div>
         <!-- About End -->
+        <!-- Gallery -->
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h5  class="section-title ff-secondary text-center text-primary fw-normal">Pizza Hut View</h5>
             <h1 class="mb-5">Gallery</h1>
         </div>
- <div class="gallery">
+ <div ng-app="ngAnimate" class="gallery">
+    Hide the DIV: <input type="checkbox" ng-model="myCheck">
+
+<div ng-hide="myCheck">
         <div class="gallery-item large">
             <img src="img/view4.jpg" alt="Image 1">
             <p>pizza view before serving</p>
@@ -182,7 +186,7 @@
             <p>Pizza view after serving</p>
         </div>
     </div>
-        
+        <!-- gallery End -->
         <!-- Team Start -->
         <div class="container-xxl pt-5 pb-3">
             <div class="container">
@@ -331,7 +335,9 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

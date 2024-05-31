@@ -413,10 +413,27 @@
                 <h2>Best atmosphere</h2>
                 <p>Pizza Hut is the place of the best pizza and high-quality service.</p>
                 <p><i>Ben Smith, Founder</i></p>
-                <button class="button">Book Now!</button>
+                <button type="button" onclick="loadDoc()">Check details!</button>
+                <p id="demo"></p>
             </div>
         </div>
-        
+        <script>
+            function loadDoc() {
+              const xhttp = new XMLHttpRequest();
+              xhttp.onload = function() {
+                if (this.status == 200) {
+                  document.getElementById("demo").innerHTML = this.responseText;
+                } else {
+                  document.getElementById("demo").innerHTML = "Error loading data";
+                }
+              }
+              xhttp.onerror = function() {
+                document.getElementById("demo").innerHTML = "Request failed";
+              }
+              xhttp.open("GET", "demo_get.asp", true);
+              xhttp.send();
+            }
+            </script>
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
